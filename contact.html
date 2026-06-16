@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ABJC Jarnac-Champagne</title>
+
+
+    <link rel="icon" type="image/png" href="assets/images/logo-abjc.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="container py-5">
+
+
+        <!-- Titre -->
+        <section class="text-center mb-5">
+            <h1 class="display-4 fw-bold section-title">
+                Contact
+            </h1>
+
+            <p class="lead mt-4">
+                Une question ? Envie de rejoindre le club ? N'hésitez pas à nous contacter.
+            </p>
+        </section>
+
+
+        <div class="row g-5">
+
+            <!-- Coordonnées -->
+            <div class="col-lg-5">
+
+                <div class="card contact-card shadow border-0">
+
+                    <div class="card-body p-4">
+
+                        <h3 class="mb-4">
+                            ABJC Jarnac-Champagne
+                        </h3>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill text-danger"></i>
+                            Salle Omnisports<br>
+                            17520 Jarnac-Champagne
+                        </p>
+
+                        <p>
+                            <i class="bi bi-envelope-fill text-danger"></i>
+                            abjc.contact@gmail.com
+                        </p>
+
+                        <p>
+                            <i class="bi bi-telephone-fill text-danger"></i>
+                            06 45 84 49 58
+                        </p>
+
+                        <p>
+                            <i class="bi bi-clock-fill text-danger"></i>
+                            Du lundi au vendredi
+                        </p>
+
+                        <hr>
+
+                        <h5 class="mb-3">
+                            Suivez-nous
+                        </h5>
+
+                        <a href="https://www.facebook.com/p/ABJC-Basket-61567086863529/" class="btn btn-primary me-2"
+                            target="_blank">
+                            <i class="bi bi-facebook"></i>
+                            Facebook
+                        </a>
+
+                        <a href="https://www.instagram.com/abjcbasket/" class="btn btn-danger" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Formulaire -->
+            <div class="col-lg-7">
+
+                <div class="card contact-card shadow border-0">
+
+                    <div class="card-body p-4">
+
+                        <h3 class="mb-4">
+                            Envoyez-nous un message
+                        </h3>
+
+                        <form action="https://formsubmit.co/abjc.contact@gmail.com" method="POST">
+
+<input type="hidden" name="_template" value="table">
+                            <!-- Désactive le captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <!-- Objet de l'email -->
+                            <input type="hidden" name="_subject" value="Nouveau message depuis le site de l'ABJC">
+
+                            <!-- Page de remerciement -->
+                            <input type="hidden" name="_next"
+   value="http://localhost/ABJC_Site_Vitrine/merci.html"> 
+                                <!--  value="https://VOTRE-NOM-UTILISATEUR.github.io/ABJC_Site_Vitrine/merci.html"> -->
+
+                            <div class="mb-3">
+                                <label class="form-label">Nom</label>
+
+                                <input type="text" name="Nom" class="form-control" required>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label class="form-label">Adresse e-mail</label>
+
+                                <input type="email" name="Email" class="form-control" required>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label class="form-label">Sujet</label>
+
+                                <input type="text" name="Sujet" class="form-control" required>
+                            </div>
+
+
+                            <div class="mb-4">
+                                <label class="form-label">Message</label>
+
+                                <textarea class="form-control" name="Message" rows="6" required></textarea>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="bi bi-send-fill"></i>
+                                Envoyer
+                            </button>
+
+
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Carte -->
+        <section class="mt-5">
+
+            <h2 class="text-center mb-4 section-title">
+                Où nous trouver ?
+            </h2>
+
+            <div class="ratio ratio-21x9 shadow rounded overflow-hidden">
+
+                <iframe src="https://www.google.com/maps?q=Salle Polyvalente - Pierre BABIN&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

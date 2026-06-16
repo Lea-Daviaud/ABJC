@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABJC Jarnac-Champagne - Club de Basket</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-abjc.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Inclusion du header -->
+    <div id="header-placeholder"></div>
+
+    <div class="background-logo">
+        <main class="container py-5">
+            <!-- Texte de présentation -->
+            <section class="my-5 text-center">
+                <h1 class="display-4 fw-bold mb-4 section-title">Bienvenue à l'ABJC Jarnac-Champagne</h1>
+                <p class="lead fs-4">
+                    L'<strong>Amicale Basket Jarnac-Champagne (ABJC)</strong> est un club dynamique et convivial,
+                    dédié à la pratique du basket-ball pour tous les âges et tous les niveaux.
+                    Situé en Charente-Maritime, notre club met l'accent sur l'esprit d'équipe,
+                    la volonté de progresser et le plaisir de jouer.
+                </p>
+                <a href="inscription.html" class="btn btn-custom btn-lg mt-3">Rejoignez-nous !</a>
+            </section>
+
+            <!-- Mot du président -->
+            <section class="my-5 bg-light p-4 rounded-3">
+                <h2 class="text-center mb-4 section-title">Mot du Président</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="text-center fs-5">
+                            "Chers membres, chers amis du basket,<br>
+                            C'est avec enthousiasme que je vous accueille sur le site de l'<strong>ABJC Jarnac-Champagne</strong>.
+                            Notre club, fort de ses valeurs de respect, de partage et de passion,
+                            continue de grandir grâce à votre engagement.
+                            Que vous soyez joueur, parent, bénévole ou supporter,
+                            vous faites partie de notre famille basket."
+                        </p>
+                        <p class="text-end fst-italic fs-5">— <strong>Gabrielle Pinaud</strong>, Présidente de l'ABJC</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emplacements pour photos -->
+            <section class="my-5">
+                <h2 class="text-center mb-4 section-title">Nos Équipes en Action</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="assets/images/equipe-senior.jpg" class="card-img-top" alt="Équipe Senior ABJC">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Équipe Senior</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="assets/images/equipe-jeune.jpg" class="card-img-top" alt="Équipe Jeune ABJC">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Équipe Jeune</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Actualités -->
+            <section class="my-5">
+                <h2 class="text-center mb-4 section-title">Actualités</h2>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Tournoi de Printemps 2026</h5>
+                                <p class="card-text">Ne manquez pas notre tournoi annuel les 20 et 21 juin 2026 ! Ouvert à tous les âges.</p>
+                                <a href="#" class="btn btn-custom">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Stage de Basket</h5>
+                                <p class="card-text">Stage d'été pour les jeunes du 6 au 10 juillet. Inscription ouverte !</p>
+                                <a href="#" class="btn btn-custom">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Assemblée Générale</h5>
+                                <p class="card-text">Rendez-vous le 6 Juin pour notre AG annuelle. Tous les membres sont conviés.</p>
+                                <a href="#" class="btn btn-custom">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Inclusion du footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script pour inclure header et footer -->
+    <script>
+        // Inclusion du header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Inclusion du footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
