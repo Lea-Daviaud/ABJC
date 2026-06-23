@@ -132,6 +132,17 @@ footer a:hover {
     padding-left: 8px;
 }
 
+.link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #eb1616;
+    text-decoration: none;
+}
+
 .social-icons a {
     display: inline-flex;
     align-items: center;
