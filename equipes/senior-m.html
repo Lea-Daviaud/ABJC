@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniors Masculins - ABJC Jarnac-Champagne</title>
+
+
+    <link rel="icon" type="image/png" href="../assets/images/logo-abjc.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="container py-5">
+
+
+        <!-- Titre -->
+        <section class="text-center mb-5">
+            <h1 class="display-4 fw-bold section-title">
+                Seniors Masculins
+            </h1>
+
+            <p class="lead mt-4">
+                L'équipe Seniors Masculins de l'ABJC accueille les jeunes joueurs nés en .... .
+                Elle permet de progresser dans un cadre convivial tout en développant les valeurs
+                du basket : respect, esprit d'équipe et plaisir du jeu.
+            </p>
+        </section>
+
+
+        <!-- Présentation -->
+        <section class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img src="../assets/images/equipes/rm2.JPG" alt="Seniors Masculins"
+                    class="img-fluid rounded shadow equipe-photo">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="card shadow border-0 equipe-card">
+
+                    <div class="card-body p-4">
+
+                        <h3 class="mb-4 text-danger">
+                            Informations de l'équipe
+                        </h3>
+
+                        <p>
+                            <i class="bi bi-person-fill"></i>
+                            <strong>Entraîneur :</strong>
+                            Nom Prénom
+                        </p>
+
+                        <p>
+                            <i class="bi bi-calendar-event"></i>
+                            <strong>Championnat :</strong>
+                            Régional 2 Seniors Masculins
+                        </p>
+
+                        <p>
+                            <i class="bi bi-clock-fill"></i>
+                            <strong>Entraînements :</strong>
+                            Mardi 18h00 - 19h30<br>
+                            Vendredi 18h00 - 19h30
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Lieu :</strong>
+                            Salle Omnisports de Jarnac-Champagne
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Valeurs -->
+        <section class="mt-5">
+
+            <div class="card shadow-lg border-0 bg-danger text-white">
+
+                <div class="card-body p-5 text-center">
+
+                    <i class="bi bi-trophy-fill display-4"></i>
+
+                    <h2 class="mt-4">
+                        Nos objectifs
+                    </h2>
+
+                    <p class="fs-5 mt-4">
+                        Développer les qualités techniques et collectives des joueurs,
+                        encourager le plaisir de jouer et transmettre les valeurs
+                        fondamentales du basket-ball.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Rejoindre l'équipe -->
+        <section class="text-center mt-5">
+
+            <h2 class="section-title mb-4">
+                Rejoindre les Seniors Masculins
+            </h2>
+
+            <p class="lead">
+                Vous souhaitez découvrir le basket ou intégrer l'équipe ?
+                N'hésitez pas à nous contacter.
+            </p>
+
+            <a href="../contact.html" class="btn btn-danger btn-lg mt-3">
+                <i class="bi bi-envelope-fill"></i>
+                Nous contacter
+            </a>
+
+        </section>
+
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

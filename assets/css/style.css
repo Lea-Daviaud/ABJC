@@ -102,9 +102,19 @@ footer a:hover {
     line-height: 1.8;
 }
 
-.footer-links {
-    list-style: none;
-    padding-left: 0;
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffcccc;
+    text-decoration: none;
+}
+
+.footer-link i {
+    margin-right: 10px;
 }
 
 .footer-links li {
@@ -272,11 +282,43 @@ object-fit: cover;
     height: 500px;
 }
 
-
-
 .equipe-photo {
     width: 100%;
     height: 500px;
     object-fit: contain;
     background-color: #ffffff;
+}
+
+.equipe-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.equipe-link:hover {
+    color: inherit;
+}
+
+.equipe-action-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.equipe-action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.equipe-action-photo {
+    width: 100%;
+    height: 220px;      /* toutes les images auront la même taille */
+    object-fit: cover;  /* évite les déformations */
+}
+
+.equipe-action-card .card-title {
+    color: #b30000;
+    font-weight: 700;
 }
