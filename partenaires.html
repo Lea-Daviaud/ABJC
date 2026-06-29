@@ -123,6 +123,46 @@
 
         </section>
 
+        <!-- Boutique officielle -->
+        <section class="mt-5">
+
+            <h2 class="text-center fw-bold mb-4">
+                Boutique officielle ABJC
+            </h2>
+
+            <div id="boutiqueCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+                <div class="carousel-inner" id="carousel-content">
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#boutiqueCarousel"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#boutiqueCarousel"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+
+                </button>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <a href="https://www.hooper-store.fr/club/boutiques-clubs/basket-ball/ab-jarnac-champagne.html"
+                    target="_blank" class="btn btn-danger btn-lg">
+
+                    Voir toute la boutique
+
+                </a>
+
+            </div>
+
+        </section>
 
         <!-- Recherche de partenaires -->
         <section class="mt-5">
@@ -177,6 +217,161 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function getNbProduits() {
+    if (window.innerWidth >= 992) return 5;      // PC
+    if (window.innerWidth >= 768) return 3;      // Tablette
+    return 2;                                    // Mobile
+};
+
+        const produits = [
+
+            {
+                nom: "TSHIRT COTON HOOPER ROOKIE ADULTE ABJC BASKET ROUGE",
+                image: "assets/images/boutique/tshirt.png",
+                lien: "https://www.hooper-store.fr/tshirt-coton-hooper-rookie-adulte-abjc-basket-rouge.html",
+                prix: "16€"
+            },
+
+            {
+                nom: "SWEAT CAPUCHE COTON HOOPER ROOKIE ADULTE ABJC BASKET BLANC",
+                image: "assets/images/boutique/sweat.png",
+                lien: "https://www.hooper-store.fr/sweat-capuche-coton-hooper-rookie-adulte-abjc-basket-blanc.html",
+                prix: "37€"
+            },
+
+            {
+                nom: "VESTE CAPUCHE COTON HOOPER ROOKIE ADULTE ABJC BASKET ROUGE",
+                image: "assets/images/boutique/veste.png",
+                lien: "https://www.hooper-store.fr/veste-capuche-coton-hooper-rookie-adulte-abjc-basket-rouge.html",
+                prix: "40€"
+            },
+
+            {
+                nom: "SHORT ENTRAINEMENT HOOPER ROOKIE ADULTE ABJC BASKET ROUGE",
+                image: "assets/images/boutique/short.png",
+                lien: "https://www.hooper-store.fr/short-entrainement-hooper-rookie-adulte-abjc-basket-rouge.html",
+                prix: "18€"
+            },
+
+            {
+                nom: "SURMAILLOT HOOPER ROOKIE ADULTE ABJC BASKET BLANC",
+                image: "assets/images/boutique/surmaillot.png",
+                lien: "https://www.hooper-store.fr/surmaillot-hooper-rookie-adulte-abjc-basket-blanc.html",
+                prix: "19€"
+            },
+
+            {
+                nom: "PANTALON HOOPER COLLEGE ADULTE ABJC BASKET NOIR",
+                image: "assets/images/boutique/pantalon.png",
+                lien: "https://www.hooper-store.fr/pantalon-hooper-college-adulte-abjc-basket-noir.html",
+                prix: "38€"
+            },
+
+            {
+                nom: "CHAUSSETTES DE BASKET HOOPER COMPETITION AJBC",
+                image: "assets/images/boutique/chaussettes.png",
+                lien: "https://www.hooper-store.fr/chaussettes-de-basket-hooper-competition-ajbc.html",
+                prix: "8€"
+            },
+
+            {
+                nom: "SAC A DOS HOOPER 46L AJBC NOIR",
+                image: "assets/images/boutique/sac.png",
+                lien: "https://www.hooper-store.fr/sac-a-dos-hooper-46l-ajbc-noir.html",
+                prix: "35€"
+            },
+
+            {
+                nom: "SAC DE SPORT HOOPER 85L AJBC NOIR",
+                image: "assets/images/boutique/sac2.png",
+                lien: "https://www.hooper-store.fr/sac-de-sport-hooper-85l-ajbc-noir.html",
+                prix: "45€"
+            },
+
+            {
+                nom: "CASQUETTE FILET HOOPER 5 PANNEUX BLANC ROUGE",
+                image: "assets/images/boutique/casquette.png",
+                lien: "https://www.hooper-store.fr/casquette-filet-hooper-5-panneux-blanc-rouge.html",
+                prix: "16€"
+            },
+
+            {
+                nom: "GOURDE HOOPER 1000ml ABJC BASKET BLANCHE",
+                image: "assets/images/boutique/gourde.png",
+                lien: "https://www.hooper-store.fr/gourde-hooper-1000ml-abjc-basket-blanche.html",
+                prix: "8€"
+            }
+
+        ];
+
+        const carousel = document.getElementById("carousel-content");
+
+        function construireCarousel() {
+
+    const nb = getNbProduits();
+
+    carousel.innerHTML = "";
+
+    for (let i = 0; i < produits.length; i += nb) {
+
+            const slide = document.createElement("div");
+            slide.className = "carousel-item" + (i === 0 ? " active" : "");
+
+            let html = '<div class="boutique-row">';
+
+            produits.slice(i, i + nb).forEach(p => {
+
+                html += `
+<div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+
+    <a href="${p.lien}" target="_blank" class="text-decoration-none">
+
+        <div class="boutique-col">
+
+            <div class="p-3 text-center">
+
+                <img src="${p.image}"
+                     class="boutique-img"
+                     alt="${p.nom}">
+
+            </div>
+
+            <div class="card-body text-center">
+
+                <h6 class="boutique-title">
+                    ${p.nom}
+                </h6>
+
+                <p class="boutique-price">
+                    ${p.prix}
+                </p>
+
+            </div>
+
+        </div>
+
+    </a>
+
+</div>
+`;
+
+            });
+
+            html += "</div>";
+
+            slide.innerHTML = html;
+
+            carousel.appendChild(slide);
+
+        }}
+
+        construireCarousel();
+
+window.addEventListener("resize", construireCarousel);
+
+    </script>
 
 </body>
 
